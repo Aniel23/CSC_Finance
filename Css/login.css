@@ -1,0 +1,162 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset & Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #000000; /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Main container */
+.login-container {
+    width: 900px;
+    height: 520px;
+    background: linear-gradient(135deg, #0b0b0b, #0a1f44, #4b2fa3); /* black → deep blue → violet */
+    border-radius: 15px;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 0 25px rgba(75,47,163,0.6); /* violet glow */
+}
+
+/* Left Panel */
+.side-panel {
+    width: 45%;
+    padding: 50px 40px;
+    color: white;
+    background: linear-gradient(135deg, #0b0b0b, #0a1f44, #3e2a91); /* black → deep blue → violet */
+}
+
+.side-panel h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #e0e0ff; /* soft violet text */
+}
+
+.side-panel p {
+    font-size: 15px;
+    opacity: 0.85;
+    color: #c0c0ff;
+}
+
+.login-link {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid #6a5acd; /* violet border */
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.login-link:hover {
+    background: #6a5acd; /* violet background */
+    box-shadow: 0 0 15px #6a5acd;
+}
+
+/* Form Box */
+.form-box {
+    width: 55%;
+    background: #0b0b0b; /* deep black for contrast */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideIn 0.6s ease;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(75,47,163,0.4); /* violet glow */
+}
+
+@keyframes slideIn {
+    from { transform: translateX(60px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+    color: #e0e0ff; /* violetish text */
+}
+
+/* Input Fields */
+.input-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #4b2fa3; /* violet border */
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+    background: #1a1a1a; /* dark background */
+    color: #ffffff;
+}
+
+.input-box input::placeholder {
+    color: #b0b0ff; /* soft violet placeholder */
+}
+
+.input-box input:focus {
+    border-color: #6a5acd; /* violet focus border */
+    box-shadow: 0 0 10px rgba(106,90,205,0.6); /* violet glow */
+}
+
+.input-box i {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 18px;
+    color: #6a5acd; /* violet icons */
+}
+
+/* Button */
+.btn, .login-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #0a1f44, #4b2fa3); /* deep blue → violet */
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover, .login-btn:hover {
+    background: linear-gradient(90deg, #4b2fa3, #6a5acd); /* violet hover */
+    box-shadow: 0 0 15px rgba(106,90,205,0.8);
+}
+
+/* Switch / Register text */
+.switch-text, .register-text {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 14px;
+    color: #c0c0ff; /* soft violet */
+}
+
+.switch-text a, .register-link {
+    color: #6a5acd; /* violet links */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.switch-text a:hover, .register-link:hover {
+    text-decoration: underline;
+}

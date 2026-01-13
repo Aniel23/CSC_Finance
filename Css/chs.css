@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #000, #0b1120, #3b0764);
+    color: #fff;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+/* TITLE */
+h1 {
+    color: #e9d5ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(168,85,247,0.6);
+}
+
+/* BACK BUTTON */
+.back-btn, .next-dept-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    background: #3b0764;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.back-btn:hover, .next-dept-btn:hover {
+    background: #a855f7;
+    box-shadow: 0 0 15px rgba(168,85,247,0.8);
+}
+
+/* Position Next Department Button to the right of Back Button */
+.next-dept-btn {
+    float: right;
+}
+
+/* SEARCH */
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.search-form input {
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 250px;
+}
+
+.search-form input:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(168,85,247,0.7);
+}
+
+.search-form button {
+    background: #a855f7;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-form button:hover {
+    box-shadow: 0 0 15px rgba(168,85,247,0.8);
+    transform: scale(1.05);
+}
+
+/* ADD FORM */
+.student-form {
+    background: rgba(255,255,255,0.06);
+    padding: 20px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.student-form input,
+.student-form select {
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+}
+
+/* BUTTON */
+.btn {
+    background: #3b0764;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a855f7;
+    box-shadow: 0 0 15px rgba(168,85,247,0.8);
+    transform: scale(1.05);
+}
+
+/* TABLE */
+.datagrid {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.06);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.datagrid thead {
+    background: rgba(168,85,247,0.25);
+}
+
+.datagrid th,
+.datagrid td {
+    padding: 14px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.datagrid th {
+    color: #e9d5ff;
+    font-weight: 600;
+}
+
+.datagrid tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.datagrid tbody tr:hover {
+    background: rgba(168,85,247,0.1);
+    transform: scale(1.01);
+}
+
+/* STATUS COLORS */
+.pending {
+    color: #facc15;
+    font-weight: 600;
+}
+
+.completed {
+    color: #4ade80;
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form input {
+        width: 100%;
+    }
+
+    .student-form {
+        grid-template-columns: 1fr;
+    }
+
+    .next-dept-btn {
+        float: none;
+        display: inline-flex;
+        margin-top: 10px;
+    }
+}

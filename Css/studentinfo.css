@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #000, #0b1120, #3b0764);
+    color: #fff;
+    min-height: 100vh;
+    padding: 30px 20px;
+    transition: background 0.5s ease;
+}
+
+/* PAGE TITLE */
+h1 {
+    color: #e9d5ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(168,85,247,0.6);
+}
+
+/* SEARCH */
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.search-form input {
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 250px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.search-form input:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(168,85,247,0.7);
+}
+
+.search-form button {
+    background: #a855f7;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-form button:hover {
+    box-shadow: 0 0 15px rgba(168,85,247,0.8);
+    transform: scale(1.05);
+}
+
+/* ADD / EDIT FORM */
+.student-form {
+    background: rgba(255,255,255,0.06);
+    padding: 20px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.student-form input {
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.student-form input:focus {
+    transform: scale(1.04);
+    box-shadow: 0 0 12px rgba(168,85,247,0.7);
+}
+
+/* BUTTONS */
+.btn {
+    background: #3b0764;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.back-btn {
+    background: #3b0764;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.back-btn:hover {
+    background: #a855f7;
+}
+
+
+.btn:hover {
+    background: #a855f7;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(168,85,247,0.8);
+}
+
+.btn.edit {
+    background: #22c55e;
+}
+
+.btn.edit:hover {
+    background: #4ade80;
+    box-shadow: 0 0 15px rgba(74,222,128,0.7);
+}
+
+.btn.delete {
+    background: #dc2626;
+}
+
+.btn.delete:hover {
+    background: #ef4444;
+    box-shadow: 0 0 15px rgba(239,68,68,0.7);
+}
+
+/* DATAGRIDVIEW TABLE */
+.datagrid {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.06);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.datagrid thead {
+    background: rgba(168,85,247,0.25);
+}
+
+.datagrid th,
+.datagrid td {
+    padding: 14px;
+    font-size: 14px;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.datagrid th {
+    color: #e9d5ff;
+    font-weight: 600;
+}
+
+.datagrid tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.2s ease;
+}
+
+.datagrid tbody tr:hover {
+    background: rgba(168,85,247,0.1);
+    transform: scale(1.01);
+}
+
+/* ACTION BUTTONS ALIGNMENT */
+.datagrid td:last-child {
+    display: flex;
+    gap: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-form input {
+        width: 100%;
+    }
+
+    .student-form {
+        grid-template-columns: 1fr;
+    }
+
+    .datagrid td:last-child {
+        flex-direction: column;
+    }
+}
